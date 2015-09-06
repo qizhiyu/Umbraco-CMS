@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -132,7 +132,8 @@ namespace umbraco.editorControls
             if (!string.IsNullOrEmpty(_tbhidden.Text))
             {
                 int so = 0;
-                foreach (string row in _tbhidden.Text.Split('�'))
+                //TODO: | is not 100% safe, use JSON instead
+                foreach (string row in _tbhidden.Text.Split('¶'))
                 {
                     if (!string.IsNullOrEmpty(row))
                     {
